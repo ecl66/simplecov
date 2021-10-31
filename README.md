@@ -1,7 +1,11 @@
-SimpleCov [![Gem Version](https://badge.fury.io/rb/simplecov.svg)](https://badge.fury.io/rb/simplecov) [![Build Status](https://github.com/simplecov-ruby/simplecov/workflows/stable/badge.svg?branch=main)][Continuous Integration] [![Maintainability](https://api.codeclimate.com/v1/badges/c071d197d61953a7e482/maintainability)](https://codeclimate.com/github/simplecov-ruby/simplecov/maintainability) [![Inline docs](http://inch-ci.org/github/simplecov-ruby/simplecov.svg?branch=main)](http://inch-ci.org/github/simplecov-ruby/simplecov)
-=========
+SimpleCov 
 
-**Code coverage for Ruby**
+<!-- [![Gem Version](https://badge.fury.io/rb/simplecov.svg)](https://badge.fury.io/rb/simplecov) [![Build Status](https://github.com/simplecov-ruby/simplecov/workflows/stable/badge.svg?branch=main)][Continuous Integration] [![Maintainability](https://api.codeclimate.com/v1/badges/c071d197d61953a7e482/maintainability)](https://codeclimate.com/github/simplecov-ruby/simplecov/maintainability) [![Inline docs](http://inch-ci.org/github/simplecov-ruby/simplecov.svg?branch=main)](http://inch-ci.org/github/simplecov-ruby/simplecov)
+========= -->
+
+**Modified Code coverage for Ruby**
+
+Forked from SimpleCov and modified to skip coverage unless block is wrapped in `# :force_cov:`.
 
   * [Source Code]
   * [API documentation]
@@ -450,6 +454,26 @@ The name of the token can be changed to your liking. [Learn more about the nocov
 **Note:** You shouldn't have to use the nocov token to skip private methods that are being included in your coverage. If
 you appropriately test the public interface of your classes and objects you should automatically get full coverage of
 your private methods.
+
+#### Forcing code coverage
+
+You can include code from the coverage report by wrapping it in `# :force_cov:`.
+
+```ruby
+# :forcecov:
+def skip_this_method
+  never_reached
+end
+# :forcecov:
+```
+
+The name of the token can be changed to your liking. 
+
+**Note:** You shouldn't have to use the forcecov token to skip private methods that are being included in your coverage. If
+you appropriately test the public interface of your classes and objects you should automatically get full coverage of
+your private methods.
+
+
 
 ## Default root filter and coverage for things outside of it
 

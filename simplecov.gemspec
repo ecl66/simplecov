@@ -19,11 +19,11 @@ Gem::Specification.new do |gem|
   gem.name        = "simplecov"
   gem.version     = version
   gem.platform    = Gem::Platform::RUBY
-  gem.authors     = ["Christoph Olszowka", "Tobias Pfeiffer"]
-  gem.email       = ["christoph at olszowka de", "pragtob@gmail.com"]
-  gem.homepage    = "https://github.com/simplecov-ruby/simplecov"
-  gem.summary     = "Code coverage for Ruby"
-  gem.description = %(Code coverage for Ruby with a powerful configuration library and automatic merging of coverage across test suites)
+  gem.authors     = ["Emmanuel Cohen-Laroque", "Christoph" Olszowka", "Tobias Pfeiffer"]
+  gem.email       = ["ecohen at hexagonalconsulting.com", "christoph at olszowka de", "pragtob@gmail.com"]
+  gem.homepage    = "https://github.com/ecl66/simplecov"
+  gem.summary     = "Code coverage for Ruby defaulting to nocov"
+  gem.description = %(Code coverage for Ruby with a powerful configuration library and automatic merging of coverage across test suites, forked to default to nocov)
   gem.license     = "MIT"
   gem.metadata    = {
     "bug_tracker_uri"   => "https://github.com/simplecov-ruby/simplecov/issues",

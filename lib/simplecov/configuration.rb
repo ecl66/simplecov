@@ -144,6 +144,21 @@ module SimpleCov
     end
     alias skip_token nocov_token
 
+
+    #
+    # Certain code blocks (i.e. Ruby-implementation specific code) can be excluded from
+    # the coverage metrics by wrapping it inside # :force_cov: comment blocks. The cov token
+    # can be configured to be any other string using this.
+    #
+    # Configure with SimpleCov.cov_token('force') or it's alias SimpleCov.cov_token('force')
+    #
+    def cov_token(cov_token = nil)
+      return @cov_token if defined?(@cov_token) && cov_token.nil?
+
+      @cov_token = (cov_token || "forcecov")
+    end
+    alias force_cov_token cov_token
+
     #
     # Returns the configured groups. Add groups using SimpleCov.add_group
     #
